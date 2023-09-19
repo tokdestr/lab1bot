@@ -46,7 +46,8 @@ def receive_message(message):
         key_car = types.InlineKeyboardButton(text="car", callback_data="Car")
         keyboard.add(key_car)
         bot.send_message(message.from_user.id, "Выбери картинку", reply_markup=keyboard)
-
+    if message.text == 'Repos':
+        bot.send_message(message.from_user.id, "https://github.com/tokdestr/lab1bot/blob/main/main.py")
 
 @bot.message_handler(content_types=['text'], state=2)
 def message_to_voice(message):
