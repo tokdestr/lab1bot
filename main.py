@@ -25,7 +25,7 @@ def random_image(call):
 def start_message(message):
     bot.send_message(message.from_user.id, "Привет, боту можно написать:\n"
                                            "1) Audio - работа с аудиофайлами\n"
-                                           "2) Photo - работа с картинками\n"
+                                           "2) Image - работа с картинками\n"
                                            "3) Repos - ссылка на репозиторий")
     bot.set_state(message.from_user.id, 1, message.chat.id)
 
